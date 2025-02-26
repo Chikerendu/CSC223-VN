@@ -4,24 +4,27 @@ package csc223.vn;
 public class SinglyLinkedList implements LinkedList {
     public Node head;
     public int size;
+
     public SinglyLinkedList() {
-    this.head = null;
-    this.size = 0;
+        this.head = null;
+        this.size = 0;
     }
     public void insert(char item) {
-    Node newNode = new Node(item);
-    if(head == null) {
-    head = newNode;
-    } else{
-    Node temp = head;
-    while(temp.next != null){
-    temp = temp.next;
+        Node newNode = new Node(item);
+        System.out.println("Abc");
+        if(this.head == null) {
+            this.head = newNode;
+        }
+        else{
+            Node temp = head;
+            while(temp.next != null){
+            temp = temp.next;
+            }
+            temp.next = newNode;
+        }
+        size++;
     }
-    temp.next = newNode;
-    }
-    size++;
-    }
-    @SuppressWarnings("null")
+    
     public void remove(char item) {
     if(head == null) {
     return;
@@ -158,7 +161,7 @@ public class SinglyLinkedList implements LinkedList {
     System.out.println("First part: " + list.getFirst());
     System.out.println("Last part: " + list.getLast());
     
-    System.out.println("Element at index 2: " + list.get(2));
+    System.out.println("Element at index 2: " + list.get(0));
     
     System.out.println("The size of list: " + list.size());
     
